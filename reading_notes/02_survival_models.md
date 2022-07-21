@@ -8,12 +8,14 @@ Let $F_x$ be the cumulative distribution function (cdf) of $T_x$, aka **lifetime
 $$
     F_x(t) = \Pr[T_x \leq t],
 $$
+
 which represents the probability that $(x)$ does not survive beyond age $x + t$.
 
 Similarly, the **survival function** is
 $$
     S_x(t) = 1 - F_x(t) = \Pr[T_x > t],
-$$ 
+$$
+
 which represents the probability that $(x)$ survives for at least $t$ years.
 
 ## The force of mortality
