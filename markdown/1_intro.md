@@ -1,4 +1,33 @@
 # Chapter 1: Introduction to life and long-term health insurance
+- [Chapter 1: Introduction to life and long-term health insurance](#chapter-1-introduction-to-life-and-long-term-health-insurance)
+  - [Background](#background)
+  - [Traditional Life Insurance Contracts](#traditional-life-insurance-contracts)
+    - [Term insurance](#term-insurance)
+    - [Whole life insurance](#whole-life-insurance)
+    - [Endowment insurance](#endowment-insurance)
+    - [Others options & riders](#others-options--riders)
+  - [Modern insurance contracts](#modern-insurance-contracts)
+    - [Universal life insurance](#universal-life-insurance)
+    - [Unitized with-profit (UWP)](#unitized-with-profit-uwp)
+    - [Equity-linked insurance](#equity-linked-insurance)
+  - [Marketing, pricing, and issuing life insurance](#marketing-pricing-and-issuing-life-insurance)
+    - [Distribution](#distribution)
+    - [Underwriting](#underwriting)
+    - [Premiums](#premiums)
+  - [Life annuities](#life-annuities)
+  - [Long-term coverages in health insurance](#long-term-coverages-in-health-insurance)
+    - [Disability income insurance](#disability-income-insurance)
+    - [Long-term care insurance](#long-term-care-insurance)
+    - [Critical illness insurance](#critical-illness-insurance)
+    - [Chronic illness insurance](#chronic-illness-insurance)
+  - [Mutual and proprietary insurers](#mutual-and-proprietary-insurers)
+  - [Other life contingent contracts](#other-life-contingent-contracts)
+    - [Continuing care retirement communities (CCRCs)](#continuing-care-retirement-communities-ccrcs)
+    - [Structured settlements](#structured-settlements)
+  - [Pensions](#pensions)
+    - [Defined benefit (DB) pensions](#defined-benefit-db-pensions)
+    - [Define contribution (DC) pensions](#define-contribution-dc-pensions)
+  - [Typical problems for life-contingent insurance](#typical-problems-for-life-contingent-insurance)
 
 ## Background
 
@@ -54,7 +83,7 @@ Pays a lump sum benefit paid either on the death of the policyholder or at the e
 - Accelerated benefits due to terminal illness
 - Accidental death benefit: higher death benefit for accidental death
 - Premium waiver on disability.
-- Family income benefit: in additional to death benefit, the insurers also pay an amount equal the annual family income × the # of years between the death and the end of the term insurance.
+- Family income benefit: in additional to death benefit, the insurers also pay an amount equal the annual family income × the number of years between the death and the end of the term insurance.
 - Critical illness insurance: a benefit is paid on diagnosis of one of a specified set of critical illnesses or disabilities
 
 ## Modern insurance contracts
