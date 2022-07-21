@@ -258,9 +258,11 @@ In some areas of the US, the IP may transfer their annuity to a specialist firm 
 Provide members with lifetime retirement income, with the amount of annual pension determined using a formula that depends on the member’s salary and period of service.
 
 The annual pension benefit $B$ is typically determined as 
+
 $$
   B = \alpha S n,
 $$
+
 where $\alpha$ is the plan accrual rate, usually 1%-2%, $n$ is the number of years of employment within the plan, and $S$ is the pensionable salary, which is determined based on the plan type:
 - final salary pension plan: $S$ is the average salary over the last few years of employment, aka final average salary plan,
 - career average earnings pension plan: $S$ is the average salary over the entire period of employment within the plan,
