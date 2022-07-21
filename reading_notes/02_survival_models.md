@@ -12,6 +12,7 @@ $$
 which represents the probability that $(x)$ does not survive beyond age $x + t$.
 
 Similarly, the **survival function** is
+
 $$
     S_x(t) = 1 - F_x(t) = \Pr[T_x > t],
 $$
