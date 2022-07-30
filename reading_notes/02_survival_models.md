@@ -185,15 +185,15 @@ We can then rewrite all the important definitions and relations using the actuar
 Let $\mathring{e}_x$ denote the expected future lifetime of $(x)$, $\mathrm{E}[T_x]$. We call this the **complete expectation of life**. By the definition of expected value, we have (note that the second equation can be derived using integration by part[^bypart])
 
 $$
-  \mathring{e}_x = \int_0^\infty tf_x(t) \,dt = \int_0^\infty S_x(t) \,dt = \int_0^\infty {}_tp_x \,dt.
+  \mathring{e}_x = \int_0^\infty tf_x(t) dt = \int_0^\infty S_x(t) dt = \int_0^\infty {}_tp_x dt.
 $$
 
 [^bypart]:
-    $\displaystyle{\int_0^\infty tf_x(t) \,dt = \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]\,dt}$. Let $u = t$ and $dv = dS_x(t)$. Then $v = S_x(t)$. We have
+    $\displaystyle{\int_0^\infty tf_x(t) dt = \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]dt}$. Let $u = t$ and $dv = dS_x(t)$. Then $v = S_x(t)$. We have
     $$
       \begin{aligned}
-        - \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]\,dt &= -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)\,dt\right) \\
-        &=\int_0^\infty S_x(t)\,dt.
+        - \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]dt &= -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)dt\right) \\
+        &=\int_0^\infty S_x(t)dt.
       \end{aligned}
     $$
 
@@ -201,15 +201,15 @@ Similarly, for $\mathrm{E}[T^2_x]$, we have
 
 $$
   \begin{aligned}
-    \mathrm{E}[T^2_x] &= \int_0^\infty t^2f_x(t)\,dt \\
-    &=2\int_0^\infty tS_x(t)\,dt = 2\int_0^\infty  t\cdot {}_tp_x\,dt.
+    \mathrm{E}[T^2_x] &= \int_0^\infty t^2f_x(t)dt \\
+    &=2\int_0^\infty tS_x(t)dt = 2\int_0^\infty  t\cdot {}_tp_xdt.
   \end{aligned}
 $$
 
 Hence, the variance of $T_x$ can be calculated as
 
 $$
-  \mathrm{Var}[T_x] = \mathrm{E}[T^2_x] - (\mathring{e}_x)^2 = 2\int_0^\infty  t\cdot {}_tp_x\,dt - \left[\int_0^\infty {}_tp_x \,dt\right]^2.
+  \mathrm{Var}[T_x] = \mathrm{E}[T^2_x] - (\mathring{e}_x)^2 = 2\int_0^\infty  t\cdot {}_tp_xdt - \left[\int_0^\infty {}_tp_x dt\right]^2.
 $$
 
 
