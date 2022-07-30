@@ -189,13 +189,13 @@ $$
 $$
 
 [^bypart]:
-  $\displaystyle{\int_0^\infty tf_x(t) \,dt = \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]\,dt}$. Let $u = t$ and $dv = dS_x(t)$. Then $v = S_x(t)$. We have
-  $$
-    \begin{aligned}
-      - \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]\,dt &= -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)\,dt\right) \\
-      &=\int_0^\infty S_x(t)\,dt.
-    \end{aligned}
-  $$
+    $\displaystyle{\int_0^\infty tf_x(t) \,dt = \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]\,dt}$. Let $u = t$ and $dv = dS_x(t)$. Then $v = S_x(t)$. We have
+    $$
+      \begin{aligned}
+        - \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]\,dt &= -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)\,dt\right) \\
+        &=\int_0^\infty S_x(t)\,dt.
+      \end{aligned}
+    $$
 
 Similarly, for $\mathrm{E}[T^2_x]$, we have
 
