@@ -328,11 +328,13 @@ $$
 ### Comparing $\mathring{e}$ and $e_x$
 
 The curtate expected lifetime can be considered as an approximation of the complete expected lifetime. The former, instead of calculating area under the survival function, sums the area of the rectangles under it.  Hence, 
+
 $$
   e_x < \mathring{e}_x.
 $$
 
 If we assume the lifetime variable within a year is uniformly distributed (which is a fair assumption because the chance of dying in December isn't much larger than dying in January), then
+
 $$
   \mathring{e}_x \approx e_x + \frac{1}{2}.
 $$
