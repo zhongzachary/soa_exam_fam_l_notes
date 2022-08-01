@@ -212,6 +212,7 @@ $$
   \end{aligned}
 $$
 
+---
 </details>
 
 Similarly, for $\mathrm{E}[T^2_x]$, we have
@@ -281,6 +282,7 @@ $$
   \end{aligned}
 $$
 
+---
 </details>
 
 The second moment of $K_x$ is
@@ -316,6 +318,7 @@ $$
   \end{aligned}
 $$
 
+---
 </details>
 
 ### Comparing $\mathring{e}$ and $e_x$
