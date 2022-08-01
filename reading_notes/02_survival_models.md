@@ -300,13 +300,7 @@ $$
 
 #### Recursive formula for expected curtate lifetime
 
-Since we know 
-
-```math
-  _k p_{x+1} = \frac{_{k+1} p_{x}}{p_x},
-```
-
-we can use $e_x$ and $p_x$ to calculate $e_{x+1}$: 
+We can use $e_x$ and $p_x$ to calculate $e_{x+1}$: 
 
 $$
   \boxed{e_{x+1} = \frac{e_x}{p_x} - 1}.
@@ -314,14 +308,14 @@ $$
 
 <details><summary>Click here for derivation</summary>
 
-```math
+$$
   \begin{aligned}
     e_{x+1} &= \sum_{k=1}^{\infty} {}_kp_{x+1} \\
     &= \sum_{k=1}^{\infty} \frac{{}_{k + 1}p_{x}}{{}_1p_x} \\
     &= \frac{1}{p_x}\cdot \left(\sum_{k=1}^{\infty} {}_{k}p_{x} - {}_1p_x \right)\\
     &= \frac{1}{p_x}(e_x - {}_1p_x) = \frac{e_x}{p_x} - 1.
   \end{aligned}
-```
+$$
 
 </details>
 
