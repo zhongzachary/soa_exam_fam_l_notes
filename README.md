@@ -55,9 +55,11 @@ Learning objectives
 Learning outcomes
 :
   1. Estimate the parameters for severity, frequency, and aggregate distributions using Maximum Likelihood Estimation for:
+   
     - Complete, individual data
     - Complete, grouped data
     - Truncated or censored data
+  
   2. Apply Kaplan Meier and Nelson Aalen methods to estimate empirical survival functions using censored and truncated lifetime data.
   3. Calculate approximate standard errors of the parameter/probability estimates.
   4. Construct linear and non-linear confidence intervals (as appropriate) for parameters/estimates.
@@ -103,7 +105,7 @@ Required chapters:
 | Chapter                        | Note                                                 | Status      | Related topics                                                         |
 | ------------------------------ | ---------------------------------------------------- | ----------- | ---------------------------------------------------------------------- |
 | 1                              | [md](reading_notes/01_intro.md)                      | Completed   | [7](#7-insurance-coverages-and-retirement-financial-security-programs) |
-| 2                              | [md](reading_notes/02_survival_models.md)            | In progress |                                                                        |
+| 2                              | [md](reading_notes/02_survival_models.md)            | Completed   | [8](#8-mortality-models)                                               |
 | 3 (except 3.11, 3.12)          | [md](reading_notes/03_life_tables_and_selection.md)  | Not started |                                                                        |
 | 4                              | [md](reading_notes/04_insurance_benefits.md)         | Not started |                                                                        |
 | 5                              | [md](reading_notes/05_annuities.md)                  | Not started |                                                                        |
