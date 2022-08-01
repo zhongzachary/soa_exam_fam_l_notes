@@ -279,7 +279,7 @@ $$
   \boxed{e_{x+1} = \frac{e_x}{p_x} - 1}.
 $$
 
-<details><summary>Derivation</summary>
+<details><summary>Click here for derivation</summary>
 
 $$
   \begin{aligned}
