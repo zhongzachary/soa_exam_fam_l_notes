@@ -58,7 +58,7 @@ These are both necessary and sufficient for $S_x(t)$ to be a survival function. 
 Assumptions 2 and 3 ensure that the **mean and variance exist** for $T_x$.
 
 ## The force of mortality
-To understand the force of mortality, $\mu_x$, we can interpret it as the probability of dying infinitesimally soon (normalized by unit time).
+To understand the **force of mortality**, $\mu_x$, aka the **hazard rate** or **failure rate**, we can interpret it as the probability of dying infinitesimally soon (normalized by unit time).
 
 $$
   \begin{aligned}
@@ -96,9 +96,9 @@ $$
 
 This is important because this can be interpret as the following: the probability of dying in $t$ is the integral (i.e. "infinitesimal sum") of the probability of surviving to $s$ $\times$ the probability of dying in interval $(s, s+ds)$ for $s \in (0, t)$.
 
-**Converting $\mu_x$ back to $S_x$**
+### Derive survival function from force of mortality
 
-Notice that for differentiable function $h$ where $h(x) > 0$ for all $x$, we have $\displaystyle{\frac{d}{dx} \log h(x)} = \frac{1}{h(x)} \frac{d}{dx} h(x)$. Hence,
+Notice that for differentiable function $h$ where $h(x) > 0$ for all $x$, we have $\displaystyle{\frac{d}{dx} \log h(x)} = \frac{1}{h(x)} \frac{d}{dx} h(x)$. Hence, we can derive $\mu_x$ from $S_0(x)$:
 
 $$
   \boxed{\mu_x = -\frac{d}{dx} \log S_0(x)}.
@@ -129,7 +129,7 @@ In other words, the force of mortality can fully describes the lifetime distribu
 
 Mortality laws are some assumptions made on the the force of mortality.
 
-The **Gompertz's law** assumes that
+The **Gompertz' law** assumes that
 
 $$
   \mu_x = Bc^x,
@@ -137,7 +137,7 @@ $$
 
 where $B > 0$ and $c > 1$. It assumes that the force of mortality increases exponentially with age.
 
-The **Makeham's law**, which is a generalization of Gompertz's law, assumes that 
+The **Makeham's law**, which is a generalization of Gompertz' law, assumes that 
 
 $$
   \mu_x = A + Bc^x,
@@ -147,7 +147,7 @@ where $A,B > 0$ and $c > 1$. The added constant $A$ was designed to reflect the 
 
 A simple way to remember which is which is that the letter 'a' appears in both Makeham's name and his mortality law.
 
-While the Gompertz's law and the Makeham's law are the most useful ones, there are other mortality laws.
+While the Gompertz' law and the Makeham's law are the most useful ones, there are other mortality laws.
 - **De Moivre's law**
   - one of the earliest mortality laws
   - $\mu_x = 1 / (\omega - x)$ and $S_0(x) = 1 - x / \omega$ for $x in [0, \omega)$
@@ -180,7 +180,8 @@ In actuarial terminology,
 - $_u|_tq_x$ is called a **deferred mortality probability**.
 
 We can then rewrite all the important definitions and relations using the actuarial notation.
-## Mean and standard deviation of $T_x$
+
+## Complete expectation of life
 
 Let $\mathring{e}_x$ denote the expected future lifetime of $(x)$, $\mathrm{E}[T_x]$. We call this the **complete expectation of life**. By the definition of expected value, we have (note that the second equation can be derived using integration by part[^bypart])
 
@@ -206,9 +207,108 @@ $$
   \mathrm{Var}[T_x] = \mathrm{E}[T^2_x] - (\mathring{e}_x)^2 = 2\int_0^\infty  t\cdot {}_tp_xdt - \left[\int_0^\infty {}_tp_x dt\right]^2.
 $$
 
+Note that not all models can have a analytic formulae for $\mathring{e}_x$. For example, if we model mortality using Gompertz' law, there is no explicit formula for $\mathring{e}_x$. However, with modern technology (i.e. desmos calculator), we can plot and tabulate the complete expectation of life at different age (see more in this [desmos plot](https://www.desmos.com/calculator/5mvvr9pa1b)).
+
+### Term expectation of life
+
+Sometimes it is useful to cap the lifetime rv to model term insurance. The expected value of of $\min(T_x, n)$ is called the **term expectation of life**, denoted $\mathring{e}_{x:\overline{n|}}$, and can be calculated as 
+
+$$
+  \mathring{e}_{x:\overline{n|}} = \int_0^n {}_tp_x dt.
+$$
 
 ## Curtate future lifetime
-### $K_x$ and $e_x$
+
+The **curtate future lifetime** rv for a life aged $x$, denoted as $K_x$, is defined as the integer part of future lifetime
+
+$$
+  K_x = \lfloor T_x \rfloor,
+$$
+
+where $\lfloor \cdot \rfloor$ is the floor function. This is the complete years lived in the future by $(x)$. This is important in actuarial contexts because future payments are made periodically, usually annually.
+
+By definition,
+
+$$
+  \begin{aligned}
+    \Pr[K_x = k] &= \Pr[k \leq T_x < k+1] \\  
+    &= {}_k|q_x \\
+    &= {}_kp_x - {}_{k+1}p_x \\
+    &= {}_kp_x - {}_kp_x\cdot p_{x+k} \\
+    &= {}_kp_x\cdot q_{x+k}.
+  \end{aligned} 
+$$
+
+### Expected curtate lifetime
+
+The expected curtate lifetime, denoted $e_x$, can be calculated[^curtate_expectation] as 
+
+$$
+  \boxed{e_x = \sum_{k=1}^\infty {}_kp_x},
+$$
+
+and note that the summation starts from $k=1$ instead of $0$.
+
+[^curtate_expectation]: $\displaystyle \mathrm{E}[K_x] = \sum_{k=0}^\infty k\cdot ({}_kp_x - {}_{k+1}p_x) = ({}_1p_x - {}_2p_x) + 2({}_2p_x - {}_3p_x) + 3({}_3p_x - {}_4p_x) + \cdots = \sum_{k=1}^\infty {}_kp_x$.
+
+The second moment of $K_x$ is
+
+$$
+  \mathrm{E}[K_x^2] = \sum_{k=1}^\infty (2k-1)\cdot {}_kp_x = 2\sum_{k=1}^\infty (k \cdot {}_kp_x) - e_x,
+$$
+
+and note again the summation starts from $k=1$ and its derivation is similar to that of $e_x$.[^curtate_expectation]
+
+For term expected curate lifetime, i.e., the expected value of $\min(K_x, n)$, it can be calculated as
+
+$$
+  e_{x:\overline{n|}} = \sum_{k=1}^n {}_kp_x.
+$$
+
+#### Recursive formula for expected curtate lifetime
+
+Since we know $\displaystyle S_{x+1}(k) = \frac{S_x(k+1)}{S_x(1)} \iff {}_kp_{x+1} = \frac{{}_{k+1}p_{x}}{{}_1p_x}$, we can use $e_x$ and ${}_1p_x$ to calculate $e_{x+1}$: 
+
+$$
+  \boxed{e_{x+1} = \frac{e_x}{p_x} - 1}.
+$$
+
+<details><summary>Derivation</summary>
+
+$$
+  \begin{aligned}
+    e_{x+1} &= \sum_{k=1}^{\infty} {}_kp_{x+1} \\
+    &= \sum_{k=1}^{\infty} \frac{{}_{k + 1}p_{x}}{{}_1p_x} \\
+    &= \frac{\sum_{k=1}^{\infty} {}_{k}p_{x} - {}_1p_x}{{}_1p_x} \\
+    &= \frac{e_x - {}_1p_x}{{}_1p_x} = \frac{e_x}{p_x} - 1.
+  \end{aligned}
+$$
+
+</details>
+
+
+
 
 ### Comparing $\mathring{e}$ and $e_x$
- 
+
+The curtate expected lifetime can be considered as an approximation of the complete expected lifetime. The former, instead of calculating area under the survival function, sums the area of the rectangles under it.  Hence, 
+$$
+  e_x < \mathring{e}_x.
+$$
+
+If we assume the lifetime variable within a year is uniformly distributed (which is a fair assumption because the chance of dying in December isn't much larger than dying in January), then
+$$
+  \mathring{e}_x \approx e_x + \frac{1}{2}.
+$$
+
+Because the mortality difference between the end of year and the beginning of year is larger for older lives than for younger lives, this approximation is less accurate at very old ages.
+
+## Generalized Gompertz-Makeham formula
+
+The Geompertz-Makeham approach has been generalize further to give the $\mathrm{GM}(r,s)$ (Gompertz-Makeham) formula,
+
+$$
+  \mu_x = h^1_r(x) + e^{h^2_s(x)},
+$$
+
+where $h_r^1$ and $h_s^2$ are polynomials in $x$ of degree $r$ and $s$, respectively.
