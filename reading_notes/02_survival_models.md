@@ -183,14 +183,37 @@ We can then rewrite all the important definitions and relations using the actuar
 
 ## Complete expectation of life
 
-Let $\mathring{e}_x$ denote the expected future lifetime of $(x)$, $\mathrm{E}[T_x]$. We call this the **complete expectation of life**. By the definition of expected value, we have (note that the second equation can be derived using integration by part[^bypart])
+Let $\mathring{e}_x$ denote the expected future lifetime of $(x)$, $\mathrm{E}[T_x]$. We call this the **complete expectation of life**:
 
 $$
-  \mathring{e}_x = \int_0^\infty tf_x(t) dt = \int_0^\infty S_x(t) dt = \int_0^\infty {}_tp_x dt.
+  \boxed{\mathring{e}_x = \int_0^\infty tf_x(t) dt = \int_0^\infty {}_tp_x dt}.
 $$
 
-[^bypart]:
-    $\displaystyle{\int_0^\infty tf_x(t) dt = \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]dt}$. Let $u = t$ and $dv = dS_x(t)$. Then $v = S_x(t)$. We have $\displaystyle - \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right] dt = -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)dt\right) = \int_0^\infty S_x(t)dt$.
+<details><summary>Click here for derivation</summary>
+
+Using the fact that $f_x(t) = -S'_x(t)$, we have
+
+$$
+  \begin{aligned}
+    \mathring{e}_x 
+    &= \int_0^\infty tf_x(t) dt \\
+    &= \int_0^\infty t \cdot \left[-\frac{dS_x(t)}{dt}\right]dt
+  \end{aligned}
+$$
+
+Let $u = t$ and $dv = dS_x(t)$. Then $v = S_x(t)$. We have
+
+$$
+  \begin{aligned}
+    \mathring{e}_x 
+    &= - \int_0^\infty t \cdot \left[\frac{dS_x(t)}{dt}\right] dt \\
+    &= -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)dt\right) \\
+    &= \int_0^\infty S_x(t)dt
+  \end{aligned}
+  
+$$
+
+</details>
 
 Similarly, for $\mathrm{E}[T^2_x]$, we have
 
@@ -241,15 +264,25 @@ $$
 
 ### Expected curtate lifetime
 
-The expected curtate lifetime, denoted $e_x$, can be calculated[^curtate_expectation] as 
+The expected curtate lifetime, denoted $e_x$, can be calculated as 
 
 $$
   \boxed{e_x = \sum_{k=1}^\infty {}_kp_x},
 $$
 
-and note that the summation starts from $k=1$ instead of $0$.
+and note that the summation starts from $k=1$ instead of $0$. This can be interpreted as summing the probability of living $k$ years for $k \geq 1$.
 
-[^curtate_expectation]: $\displaystyle \mathrm{E}[K_x] = \sum_{k=0}^\infty k\cdot ({}_kp_x - {}_{k+1}p_x) = ({}_1p_x - {}_2p_x) + 2({}_2p_x - {}_3p_x) + 3({}_3p_x - {}_4p_x) + \cdots = \sum_{k=1}^\infty {}_kp_x$.
+<details><summary>Click here for derivation</summary>
+
+$$
+  \begin{aligned}
+    \mathrm{E}[K_x] &= \sum_{k=0}^\infty k\cdot ({}_kp_x - {}_{k+1}p_x) \\
+    &= ({}_1p_x - {}_2p_x) + 2({}_2p_x - {}_3p_x) + 3({}_3p_x - {}_4p_x) + \cdots \\
+    &= \sum_{k=1}^\infty {}_kp_x
+  \end{aligned}
+$$
+
+</details>
 
 The second moment of $K_x$ is
 
@@ -257,7 +290,7 @@ $$
   \mathrm{E}[K_x^2] = \sum_{k=1}^\infty (2k-1)\cdot {}_kp_x = 2\sum_{k=1}^\infty (k \cdot {}_kp_x) - e_x,
 $$
 
-and note again the summation starts from $k=1$ and its derivation is similar to that of $e_x$.[^curtate_expectation]
+and note again the summation starts from $k=1$ and its derivation is similar to that of $e_x$.
 
 For term expected curate lifetime, i.e., the expected value of $\min(K_x, n)$, it can be calculated as
 
@@ -267,13 +300,7 @@ $$
 
 #### Recursive formula for expected curtate lifetime
 
-Since we know 
-
-```math
-  {}_k p_{x+1} = \frac{{}_{k+1} p_{x}}{p_x},
-```
-
-we can use $e_x$ and $p_x$ to calculate $e_{x+1}$: 
+Since we know $\displaystyle{{}_k p_{x+1} = \frac{{}_{k+1} p_{x}}{p_x}}$, we can use $e_x$ and $p_x$ to calculate $e_{x+1}$: 
 
 $$
   \boxed{e_{x+1} = \frac{e_x}{p_x} - 1}.
@@ -291,9 +318,6 @@ $$
 $$
 
 </details>
-
-
-
 
 ### Comparing $\mathring{e}$ and $e_x$
 
