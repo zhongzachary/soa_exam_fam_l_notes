@@ -267,7 +267,7 @@ $$
 
 #### Recursive formula for expected curtate lifetime
 
-Since we know $\displaystyle S_{x+1}(k) = \frac{S_x(k+1)}{S_x(1)} \iff {}_kp_{x+1} = \frac{{}_{k+1}p_{x}}{{}_1p_x}$, we can use $e_x$ and ${}_1p_x$ to calculate $e_{x+1}$: 
+Since we know $S_{x+1}(k) = \frac{S_x(k+1)}{S_x(1)} \iff {}_kp_{x+1} = \frac{{}_{k+1}p_{x}}{{}_1p_x}$, we can use $e_x$ and ${}_1p_x$ to calculate $e_{x+1}$: 
 
 $$
   \boxed{e_{x+1} = \frac{e_x}{p_x} - 1}.
@@ -277,7 +277,7 @@ $$
 
 $$
   \begin{aligned}
-    e_{x+1} &= \sum_{k=1}^{\infty} {}_kp_{x+1} \\
+    e_{x+1} &= \sum_{k=1}^{\infty} {}_k p_{x+1} \\
     &= \sum_{k=1}^{\infty} \frac{{}_{k + 1}p_{x}}{{}_1p_x} \\
     &= \frac{\sum_{k=1}^{\infty} {}_{k}p_{x} - {}_1p_x}{{}_1p_x} \\
     &= \frac{e_x - {}_1p_x}{{}_1p_x} = \frac{e_x}{p_x} - 1.
