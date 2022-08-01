@@ -56,9 +56,9 @@ Learning outcomes
 :
   1. Estimate the parameters for severity, frequency, and aggregate distributions using Maximum Likelihood Estimation for:
    
-    - Complete, individual data
-    - Complete, grouped data
-    - Truncated or censored data
+     - Complete, individual data
+     - Complete, grouped data
+     - Truncated or censored data
   
   2. Apply Kaplan Meier and Nelson Aalen methods to estimate empirical survival functions using censored and truncated lifetime data.
   3. Calculate approximate standard errors of the parameter/probability estimates.
