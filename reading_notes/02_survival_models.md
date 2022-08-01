@@ -210,7 +210,6 @@ $$
     &= -\left(\Bigl[tS_x(t)\Bigr]_0^\infty - \int_0^\infty S_x(t)dt\right) \\
     &= \int_0^\infty S_x(t)dt
   \end{aligned}
-  
 $$
 
 </details>
