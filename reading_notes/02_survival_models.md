@@ -274,11 +274,11 @@ By definition,
 
 $$
   \begin{aligned}
-    \Pr[K_x = k] &= \Pr[k \leq T_x < k+1] \\  
-    &= {}_k|q_x \\
-    &= {}_kp_x - {}_{k+1}p_x \\
-    &= {}_kp_x - {}_kp_x\cdot p_{x+k} \\
-    &= {}_kp_x\cdot q_{x+k}.
+    \Pr[K _x = k] &= \Pr[k \leq T _x < k+1] \\  
+    &= {} _k|q _x \\
+    &= {} _kp _x - {} _{k+1}p_x \\
+    &= {} _kp _x - {} _kp _x\cdot p _{x+k} \\
+    &= {} _kp _x\cdot q _{x+k}.
   \end{aligned} 
 $$
 
@@ -287,7 +287,7 @@ $$
 The expected curtate lifetime, denoted $e_x$, can be calculated as 
 
 $$
-  \boxed{e_x = \sum_{k=1}^\infty {}_kp_x},
+  \boxed{e _x = \sum _{k=1}^\infty {} _kp _x},
 $$
 
 and note that the summation starts from $k=1$ instead of $0$. This can be interpreted as summing the probability of living $k$ years for $k \geq 1$.
@@ -296,9 +296,9 @@ and note that the summation starts from $k=1$ instead of $0$. This can be interp
 
 $$
   \begin{aligned}
-    \mathrm{E}[K_x] &= \sum_{k=0}^\infty k\cdot ({}_kp_x - {}_{k+1}p_x) \\
-    &= ({}_1p_x - {}_2p_x) + 2({}_2p_x - {}_3p_x) + 3({}_3p_x - {}_4p_x) + \cdots \\
-    &= \sum_{k=1}^\infty {}_kp_x
+    \mathrm{E}[K _x] &= \sum_{k=0}^\infty k\cdot ({} _kp _x - {} _{k+1}p _x) \\
+    &= ({} _1p _x - {} _2p _x) + 2({} _2p _x - {} _3p _x) + 3({} _3p _x - {} _4p _x) + \cdots \\
+    &= \sum _{k=1}^\infty {} _kp _x
   \end{aligned}
 $$
 
@@ -308,7 +308,7 @@ $$
 The second moment of $K_x$ is
 
 $$
-  \mathrm{E}[K_x^2] = \sum_{k=1}^\infty (2k-1)\cdot {}_kp_x = 2\sum_{k=1}^\infty (k \cdot {}_kp_x) - e_x,
+  \mathrm{E}[K _x^2] = \sum _{k=1}^\infty (2k-1)\cdot {} _kp _x = 2\sum _{k=1}^\infty (k \cdot {} _kp _x) - e _x,
 $$
 
 and note again the summation starts from $k=1$ and its derivation is similar to that of $e_x$.
@@ -316,7 +316,7 @@ and note again the summation starts from $k=1$ and its derivation is similar to 
 For term expected curate lifetime, i.e., the expected value of $\min(K_x, n)$, it can be calculated as
 
 $$
-  e_{x:\overline{n|}} = \sum_{k=1}^n {}_kp_x.
+  e _{x:\overline{n|}} = \sum _{k=1}^n {} _k p _x.
 $$
 
 #### Recursive formula for expected curtate lifetime
@@ -324,17 +324,17 @@ $$
 We can use $e_x$ and $p_x$ to calculate $e_{x+1}$: 
 
 $$
-  \boxed{e_{x+1} = \frac{e_x}{p_x} - 1}.
+  \boxed{e _{x+1} = \frac{e _x}{p _x} - 1}.
 $$
 
 <details><summary>Click here for derivation</summary>
 
 $$
   \begin{aligned}
-    e_{x+1} &= \sum_{k=1}^{\infty} {}_kp_{x+1} \\
-    &= \sum_{k=1}^{\infty} \frac{{}_{k + 1}p_{x}}{{}_1p_x} \\
-    &= \frac{1}{p_x}\cdot \left(\sum_{k=1}^{\infty} {}_{k}p_{x} - {}_1p_x \right)\\
-    &= \frac{1}{p_x}(e_x - {}_1p_x) = \frac{e_x}{p_x} - 1.
+    e _{x+1} &= \sum _{k=1}^{\infty} {} _k p _{x+1} \\
+    &= \sum _{k=1}^{\infty} \frac{{} _{k + 1} p _{x}}{{} _1 p _x} \\
+    &= \frac{1}{p _x}\cdot \left(\sum _{k=1}^{\infty} {} _{k} p _{x} - {} _1 p _x \right)\\
+    &= \frac{1}{p _x}(e _x - {} _1 p _x) = \frac{e _x}{p _x} - 1.
   \end{aligned}
 $$
 
@@ -346,13 +346,13 @@ $$
 The curtate expected lifetime can be considered as an approximation of the complete expected lifetime. The former, instead of calculating area under the survival function, sums the area of the rectangles under it.  Hence, 
 
 $$
-  e_x < \mathring{e}_x.
+  e _x < \mathring{e} _x.
 $$
 
 If we assume the lifetime variable within a year is uniformly distributed (which is a fair assumption because the chance of dying in December isn't much larger than dying in January), then
 
 $$
-  \mathring{e}_x \approx e_x + \frac{1}{2}.
+  \mathring{e} _x \approx e _x + \frac{1}{2}.
 $$
 
 Because the mortality difference between the end of year and the beginning of year is larger for older lives than for younger lives, this approximation is less accurate at very old ages.
@@ -362,7 +362,7 @@ Because the mortality difference between the end of year and the beginning of ye
 The Geompertz-Makeham approach has been generalize further to give the $\mathrm{GM}(r,s)$ (Gompertz-Makeham) formula,
 
 $$
-  \mu_x = h^1_r(x) + e^{h^2_s(x)},
+  \mu _x = h^1 _r(x) + e^{h^2 _s(x)},
 $$
 
 where $h_r^1$ and $h_s^2$ are polynomials in $x$ of degree $r$ and $s$, respectively.
