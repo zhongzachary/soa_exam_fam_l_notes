@@ -232,6 +232,26 @@ $$
 
 Note that not all models can have a analytic formulae for $\mathring{e}_x$. For example, if we model mortality using Gompertz' law, there is no explicit formula for $\mathring{e}_x$. However, with modern technology (i.e. desmos calculator), we can plot and tabulate the complete expectation of life at different age (see more in this [desmos plot](https://www.desmos.com/calculator/5mvvr9pa1b)).
 
+**Theorem** (Exercise 2.11a in AMLCR3e) $\mathring{e}_x \leq \mathring{e}_{x+1}+1$. Intuitively, lives aged $x$ may not live for a year, so $\mathring{e}_x + x \leq \mathring{e}_{x+1} + x + 1$. We can also prove this from the definition.
+
+<details><summary>Click here for proof</summary>
+
+$$
+  \begin{aligned}
+    \mathring{e}_x - \mathring{e}_{x+1} &= \int_0^\infty S_x(t) dt - \int_0^\infty S_{x+1}(t) dt \\
+    &= \int_0^\infty S_x(t) dt - \int_0^\infty \frac{S_{x}(t+1)}{S_x(1)} dt \\
+    &= \int_0^\infty S_x(t) dt - \int_1^\infty \frac{S_{x}(t)}{S_x(1)} dt \\
+    &\leq \int_0^\infty S_x(t) dt - \int_1^\infty S_{x}(t) dt \\
+    &= \int_0^1 S_x(t) dt \\
+    &\leq \int_0^1 1 dt = 1.
+  \end{aligned}
+$$
+
+---
+</details>
+
+We can also take this further to show $\mathring{e}_x \leq \mathring{e}_{x+t}+t$.
+
 ### Term expectation of life
 
 Sometimes it is useful to cap the lifetime rv to model term insurance. The expected value of of $\min(T_x, n)$ is called the **term expectation of life**, denoted $\mathring{e}_{x:\overline{n|}}$, and can be calculated as 
