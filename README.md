@@ -4,14 +4,31 @@ Author: Shanghao Zhong
 Date: 2022-07-21
 
 - [SOA FAM-L Study Notes](#soa-fam-l-study-notes)
+  - [Reading Notes](#reading-notes)
   - [Syllabus](#syllabus)
     - [7. Insurance Coverages and Retirement Financial Security Programs](#7-insurance-coverages-and-retirement-financial-security-programs)
     - [8. Mortality Models](#8-mortality-models)
     - [9. Parametric and Non-Parametric Estimation](#9-parametric-and-non-parametric-estimation)
     - [10. Present Value Random Variables for Long-Term Insurance Coverages](#10-present-value-random-variables-for-long-term-insurance-coverages)
     - [11. Premium and Policy Value Calculation for Long-Term Insurance Coverages](#11-premium-and-policy-value-calculation-for-long-term-insurance-coverages)
-  - [Reading Notes](#reading-notes)
 
+## Reading Notes
+Textbook: *Actuarial Mathematics for Life Contingent Risks, Third Edition (2020)*
+> - Authors: David C. M. Dickson, Mary R. Hardy and Howard R. Water
+> - Publisher: Cambridge University Press
+> - ISBN: 978-1-108-47808-3
+
+Required chapters:
+| Chapter                        | Note                                                 | Status      | Related topics                                                         |
+| ------------------------------ | ---------------------------------------------------- | ----------- | ---------------------------------------------------------------------- |
+| 1                              | [md](reading_notes/01_intro.md)                      | Completed   | [7](#7-insurance-coverages-and-retirement-financial-security-programs) |
+| 2                              | [md](reading_notes/02_survival_models.md)            | Completed   | [8](#8-mortality-models)                                               |
+| 3 (except 3.11, 3.12)          | [md](reading_notes/03_life_tables_and_selection.md)  | Not started |                                                                        |
+| 4                              | [md](reading_notes/04_insurance_benefits.md)         | Not started |                                                                        |
+| 5                              | [md](reading_notes/05_annuities.md)                  | Not started |                                                                        |
+| 6                              | [md](reading_notes/06_premium_calculation.md)        | Not started |                                                                        |
+| 7 (1-3, except 2.4, 2.5, 7, 8) | [md](reading_notes/07_policy_values.md)              | Not started |                                                                        |
+| 18 (1-5)                       | [md](reading_notes/18_estimating_survival_models.md) | Not started |                                                                        |
 
 ## Syllabus
 
@@ -93,22 +110,3 @@ Learning outcomes
   3. Calculate and interpret gross premium, net premium and modified net premium policy values for the policies in 11.1.
   4. Calculate the effect of changes in underlying assumptions (e.g., mortality and interest).
   5. Apply the following methods for modelling extra risk: age rating; constant addition to the force of mortality, constant multiple of the rate of mortality.
-
-
-## Reading Notes
-Textbook: *Actuarial Mathematics for Life Contingent Risks, Third Edition (2020)*
-> - Authors: David C. M. Dickson, Mary R. Hardy and Howard R. Water
-> - Publisher: Cambridge University Press
-> - ISBN: 978-1-108-47808-3
-
-Required chapters:
-| Chapter                        | Note                                                 | Status      | Related topics                                                         |
-| ------------------------------ | ---------------------------------------------------- | ----------- | ---------------------------------------------------------------------- |
-| 1                              | [md](reading_notes/01_intro.md)                      | Completed   | [7](#7-insurance-coverages-and-retirement-financial-security-programs) |
-| 2                              | [md](reading_notes/02_survival_models.md)            | Completed   | [8](#8-mortality-models)                                               |
-| 3 (except 3.11, 3.12)          | [md](reading_notes/03_life_tables_and_selection.md)  | Not started |                                                                        |
-| 4                              | [md](reading_notes/04_insurance_benefits.md)         | Not started |                                                                        |
-| 5                              | [md](reading_notes/05_annuities.md)                  | Not started |                                                                        |
-| 6                              | [md](reading_notes/06_premium_calculation.md)        | Not started |                                                                        |
-| 7 (1-3, except 2.4, 2.5, 7, 8) | [md](reading_notes/07_policy_values.md)              | Not started |                                                                        |
-| 18 (1-5)                       | [md](reading_notes/18_estimating_survival_models.md) | Not started |                                                                        |
