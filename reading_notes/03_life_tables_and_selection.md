@@ -24,7 +24,7 @@ $$
 $$
 
 If we let $L_{x,t}$ be a rv of the number of survivors to age $x + t$, it will follow a binomial distribution with parameters $l_x$ and ${} _t p _x$. 
-$\mathrm{E}[L_{x,t}] = l_x \cdot {} _t p _x = l_{x + t}$, so $l_{x + t}$ can be interpret as the **expected number of survivors** at age $x + t$ given there are $l_x$ independent lives aged $x$.
+$\mathrm{E}[L _{x,t}] = l_x \cdot {} _t p _x = l _{x + t}$, so $l _{x + t}$ can be interpret as the **expected number of survivors** at age $x + t$ given there are $l_x$ independent lives aged $x$.
 
 Thus, to calculate the survival probability, we can use ${} _t p _x = l _{x+t} / l_x$.
 
