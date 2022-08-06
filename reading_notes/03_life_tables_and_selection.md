@@ -67,19 +67,19 @@ $$
   f_x(s) = \frac{d({} _s q _x)}{ds} = \frac{d(s \cdot q _x)}{ds} = q_x,
 $$
 
-which is a constant for all $s \in [0, 1)$ at a given $x$. Since $f_x(s) = {} _s p_x \cdot \mu_{x+s}$, we have
+which is a constant for all $s \in [0, 1)$ at a given $x$. Since $f _x(s) = {} _s p _x \cdot \mu _{x+s}$, we have
 
 $$
-  q_x = {} _s p_x \cdot \mu_{x+s}.
+  q _x = {} _s p_x \cdot \mu _{x+s}.
 $$
 
 Because ${} _s p_x$ is a decreasing function and $q_x$ is a constant, the force of mortality is an increasing function for all $s \in [0,1)$, confirming it is an appropriate assumption. One drawback, albeit not serious, is that the force of mortality has discontinuities at integer ages.
 
 ### Constant force of mortality
 
-A second fractional age assumption is that the force of mortality is constant between integer ages. Hence, for $x \in \mathbb{Z}_{>0}$, $\mu_{x+s}$ does not depend on $s, \forall s \in [0,1)$. We can denote $\mu_{x+s} = \mu_x^*$.
+A second fractional age assumption is that the force of mortality is constant between integer ages. Hence, for $x \in \mathbb{Z} _{>0}$, $\mu _{x+s}$ does not depend on $s, \forall s \in [0,1)$. We can denote $\mu _{x+s} = \mu _x ^*$.
 
-To calculate $\mu_x^*$, we use
+To calculate $\mu _x ^*$, we use
 
 $$
   \begin{aligned}
