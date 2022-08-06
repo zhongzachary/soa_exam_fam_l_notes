@@ -45,7 +45,7 @@ Since a life table is usually tabulated at integer ages only, when we are calcul
 The uniform distribution of deaths (UDD) assumption is the most common one. It can be formulated in tow equivalent ways:
 
 1. For $s \in [0, 1)$, we assume ${} _s q _x = s \cdot q_x$.
-2. For a life $(x)$ where $x \in \Z_{>0}$, let $T_x$ is the future lifetime rv and $K_x$ is the curtate future lifetime rv. We define $R_x$ is the factional part of the future lifetime of $(x)$ lived in a year of death, hence $T_x = K_x + R_x$. We assume $R_x \sim \mathrm{Uniform}(0,1)$, independent of $K_x$.
+2. For a life $(x)$ where $x \in \mathbb{Z}_{>0}$, let $T_x$ is the future lifetime rv and $K_x$ is the curtate future lifetime rv. We define $R_x$ is the factional part of the future lifetime of $(x)$ lived in a year of death, hence $T_x = K_x + R_x$. We assume $R_x \sim \mathrm{Uniform}(0,1)$, independent of $K_x$.
 
 While the textbook has the proof on why these 2 assumptions are equivalent, the first formulation is more useful for working with life tables. Immediately from the assumption, we have
 
@@ -77,7 +77,7 @@ Because ${} _s p_x$ is a decreasing function and $q_x$ is a constant, the force 
 
 ### Constant force of mortality
 
-A second fractional age assumption is that the force of mortality is constant between integer ages. Hence, for $x \in \Z_{>0}$, $\mu_{x+s}$ does not depend on $s, \forall s \in [0,1)$. We can denote $\mu_{x+s} = \mu_x^*$.
+A second fractional age assumption is that the force of mortality is constant between integer ages. Hence, for $x \in \mathbb{Z}_{>0}$, $\mu_{x+s}$ does not depend on $s, \forall s \in [0,1)$. We can denote $\mu_{x+s} = \mu_x^*$.
 
 To calculate $\mu_x^*$, we use
 
