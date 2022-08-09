@@ -23,7 +23,7 @@ Required chapters:
 | ------------------------------ | ---------------------------------------------------- | ----------- | ---------------------------------------------------------------------- |
 | 1                              | [md](reading_notes/01_intro.md)                      | Completed   | [7](#7-insurance-coverages-and-retirement-financial-security-programs) |
 | 2                              | [md](reading_notes/02_survival_models.md)            | Completed   | [8](#8-mortality-models)                                               |
-| 3 (except 3.11, 3.12)          | [md](reading_notes/03_life_tables_and_selection.md)  | In progress |                                                                        |
+| 3 (except 3.11, 3.12)          | [md](reading_notes/03_life_tables_and_selection.md)  | Completed   | [8](#8-mortality-models)                                               |
 | 4                              | [md](reading_notes/04_insurance_benefits.md)         | Not started |                                                                        |
 | 5                              | [md](reading_notes/05_annuities.md)                  | Not started |                                                                        |
 | 6                              | [md](reading_notes/06_premium_calculation.md)        | Not started |                                                                        |
