@@ -1,5 +1,19 @@
 # Chapter 2: Survival Models
 
+- [Chapter 2: Survival Models](#chapter-2-survival-models)
+  - [The future lifetime random variable](#the-future-lifetime-random-variable)
+  - [The force of mortality](#the-force-of-mortality)
+    - [Derive survival function from force of mortality](#derive-survival-function-from-force-of-mortality)
+    - [Mortality laws](#mortality-laws)
+  - [Actuarial notation](#actuarial-notation)
+  - [Complete expectation of life](#complete-expectation-of-life)
+    - [Term expectation of life](#term-expectation-of-life)
+  - [Curtate future lifetime](#curtate-future-lifetime)
+    - [Expected curtate lifetime](#expected-curtate-lifetime)
+      - [Recursive formula for expected curtate lifetime](#recursive-formula-for-expected-curtate-lifetime)
+    - [Comparing $\mathring{e}$ and $e_x$](#comparing-mathringe-and-e_x)
+  - [Generalized Gompertz-Makeham formula](#generalized-gompertz-makeham-formula)
+
 ## The future lifetime random variable
 Let $(x)$ denotes a life aged $x$, where $x \geq 0$. We model the **future lifetime** of $(x)$ by a continuous random variable (rv) $T_x$. This means $x + T_x$ is the rv of age-at-death for $(x)$.
 
