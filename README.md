@@ -24,9 +24,9 @@ Required chapters:
 | 1                              | Intro to life insurance  | [md](reading_notes/01_intro.md)                      | Completed   | [7](#7-insurance-coverages-and-retirement-financial-security-programs)     |
 | 2                              | Survival model           | [md](reading_notes/02_survival_models.md)            | Completed   | [8](#8-mortality-models)                                                   |
 | 3 (except 3.11, 3.12)          | Life tables              | [md](reading_notes/03_life_tables_and_selection.md)  | Completed   | [8](#8-mortality-models)                                                   |
-| 4                              | Life insurance valuation | [md](reading_notes/04_insurance_benefits.md)         | Completed   | [10](#10-present-value-random-variables-for-long-term-insurance-coverages) |
-| 5                              |                          | [md](reading_notes/05_annuities.md)                  | Not started |                                                                            |
-| 6                              |                          | [md](reading_notes/06_premium_calculation.md)        | Not started |                                                                            |
+| 4                              | Life insurance functions | [md](reading_notes/04_insurance_benefits.md)         | Completed   | [10](#10-present-value-random-variables-for-long-term-insurance-coverages) |
+| 5                              | Annuity functions        | [md](reading_notes/05_annuities.md)                  | Completed   | [10](#10-present-value-random-variables-for-long-term-insurance-coverages) |
+| 6                              | Premium calculation      | [md](reading_notes/06_premium_calculation.md)        | Not started |                                                                            |
 | 7 (1-3, except 2.4, 2.5, 7, 8) |                          | [md](reading_notes/07_policy_values.md)              | Not started |                                                                            |
 | 18 (1-5)                       |                          | [md](reading_notes/18_estimating_survival_models.md) | Not started |                                                                            |
 
