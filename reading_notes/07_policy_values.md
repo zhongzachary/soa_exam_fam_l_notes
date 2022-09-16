@@ -3,6 +3,7 @@
 - [Chapter 7: Policy values](#chapter-7-policy-values)
   - [The future loss rv and the policy value function](#the-future-loss-rv-and-the-policy-value-function)
   - [Policies with annual cash flows](#policies-with-annual-cash-flows)
+    - [Variance of future loss rv](#variance-of-future-loss-rv)
     - [Recursive formulae for policy values](#recursive-formulae-for-policy-values)
   - [Policy values for policies with monthly cash flows](#policy-values-for-policies-with-monthly-cash-flows)
     - [Recursions with monthly cash flows](#recursions-with-monthly-cash-flows)
@@ -97,6 +98,43 @@ $$
   \begin{aligned}
     {} _t V = &P\cdot (IA) _{[x] + t:\overline{d - t|}} ^ 1 + (t\cdot P + 100) \cdot A _{[x] + t:\overline{d - t|}} ^ 1 + (M + 25) \cdot {} _{d - t} E _{[x]+t} \cdot \ddot{a} _{[x]+ d} \\ 
     &- (1 - 5\%)\cdot P \cdot \ddot{a} _{[x] + t: \overline{d - t|}}
+  \end{aligned}
+$$
+
+### Variance of future loss rv
+
+For a whole life insurance policy of sum insured $S$ issued to $(x)$, let $L_t$ be the future loss rv at time $t$.
+
+Then, the expected value is 
+
+$$
+  \mathrm{E}[L_t] = \mathrm{E}\left[S \cdot v ^{K _{x+t} + 1} - P\cdot \frac{1- v^{K _{x+t} + 1}}{d}\right] = S\cdot A _{x+t} - P\cdot \ddot {a} _{x+t},
+$$
+
+And the variance is
+
+$$
+  \begin{aligned}
+    \mathrm{Var}[L_t] &= \mathrm{Var}\left[S \cdot v ^{K _{x+t} + 1} - P\cdot \frac{1- v^{K _{x+t} + 1}}{d}\right] \\
+    &= \left(S+\frac{P}{d}\right)^2\cdot \mathrm{Var}[v ^{K _{x+t} + 1}] \\
+    &= \left(S+\frac{P}{d}\right)^2\cdot \left({} ^ 2 A _{x+t} - A _{x+t} ^2\right) \\
+  \end{aligned}
+$$
+
+If the premium is calculated using equivalent principle, we have
+
+$$
+  P = \frac{S \cdot A_{x}}{\ddot{a}_{x}} 
+  = \frac{S \cdot (1 - d \cdot \ddot{a} _x)}{\ddot a _{x}} = S\cdot \left(\frac{1}{\ddot a _x} - d\right).
+$$
+
+Then,
+
+$$
+  \begin{aligned}
+    \mathrm{Var}[L_t] &= \left(\frac{S\cdot d + S\cdot \left(\frac{1}{\ddot a _x} - d\right)}{d} \right)^2 \cdot \left({} ^ 2 A _ {x+t} - A _{x+t} ^2\right) \\
+    &= \left( \frac{S}{d\cdot \ddot a _x} \right) ^2 \cdot \left({} ^ 2 A _ {x+t} - A _{x+t} ^2\right) \\
+    &= \left( \frac{S}{1 - A_x} \right) ^2 \cdot \left({} ^ 2 A _ {x+t} - A _{x+t} ^2\right)
   \end{aligned}
 $$
 

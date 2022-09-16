@@ -132,6 +132,8 @@ $$
   \ddot{a} _{x : \overline{n|}} = \frac{1 - A _{x:\overline{n|}}}{d}.
 $$
 
+**Important: The term annuity function is related to the endowment function, not term life!!!**
+
 Alternatively, it can be calculated as the sum of expected present value of each payment:
 
 $$
@@ -388,7 +390,8 @@ $$
     &= \frac{i ^{(m)} - i \cdot A ^{(m)} _x}{i ^{(m)} \cdot d ^{(m)}} \\
     &= \frac{i ^{(m)} - i \cdot A ^{(m)} _x}{i ^{(m)} \cdot d ^{(m)}} \\
     &= \frac{i ^{(m)} - i \cdot (1 - d\cdot \ddot{a} _x)}{i ^{(m)} \cdot d ^{(m)}} & \because \ddot{a} _x = \frac{1 - A _x}{d}\\
-    &= \frac{i\cdot d}{i^{(m)} \cdot d^{(m)}} \cdot \ddot{a}_x - \frac{i - i^{(m)}}{i^{(m)} \cdot d^{(m)}}
+    &= \frac{i\cdot d}{i^{(m)} \cdot d^{(m)}} \cdot \ddot{a}_x - \frac{i - i^{(m)}}{i^{(m)} \cdot d^{(m)}} \\
+    &= \alpha(m)\cdot \ddot a _x - \beta (m) & \text{$\alpha(m)$ and $\beta (m)$ are in the formula sheet}
   \end{aligned} 
 $$
 
@@ -464,6 +467,8 @@ For term annuities, we have
 $$
   \ddot{a} ^{(m)} _{x:\overline{n|}} = \ddot{a}  _{x:\overline{n|}} - \frac{m-1}{2m} \cdot (1 - {} _n E _x) - \frac{m^2 - 1}{12m^2} \cdot (\delta + \mu_x) \cdot (1 -{} _n E _x).
 $$
+
+**Tips on using formulas sheet**: The formula sheet only provide three-term Woolhouse formula for whole life annuity. Hence, it may be easier to let $\ddot{a} ^{(m)} _{x:\overline{n|}} = \ddot a ^{(m)} _{x} - {} _ n E _x \cdot \ddot a ^{(m)} _{x+n}$ and approximate those 2 whole life annuity function separately.
 
 With three-term Woolhouse formula, we can even get better approximation for life insurance by applying $A ^{(m)} _x = 1 - d^{(m)} \cdot \ddot{a} ^{(m)} _x$ and replacing $\ddot{a} ^{(m)} _x$ with Woolhouse formula. This can be more accurate than the UUD approach. 
 

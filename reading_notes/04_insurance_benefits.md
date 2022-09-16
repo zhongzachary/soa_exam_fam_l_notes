@@ -383,6 +383,12 @@ Because $e ^{\delta} = 1 + i$, $\bar{A} _x = \frac{i}{\delta} \cdot A_x$.
 ---
 </details>
 
+And in general, to approximate the $k$-th moment of $\bar A _x$ to calculate variance, we have
+
+$$
+  \mathrm{E}[v^{k\cdot T_x}] = {} ^k \bar A _x \approx \frac{(1 + i) ^ k - 1}{\delta} \cdot {} ^k A _x.
+$$
+
 Directionally, since $\forall i > 0, i / \delta > 1$, $\bar{A} _x > A _x$. This makes sense because paying soon would result in a higher present value. Such approximation applies to term insurance and deferred insurance. And for the $1/m$-thly case,
 
 $$

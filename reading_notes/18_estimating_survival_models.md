@@ -6,9 +6,12 @@
   - [Non-parametric survival function estimation](#non-parametric-survival-function-estimation)
     - [The empirical distribution for seriatim data](#the-empirical-distribution-for-seriatim-data)
     - [The empirical distribution for grouped data](#the-empirical-distribution-for-grouped-data)
-    - [The Kaplan–Meier estimate](#the-kaplanmeier-estimate)
+    - [The Kaplan–Meier estimator](#the-kaplanmeier-estimator)
     - [The Nelson–Aalen estimator](#the-nelsonaalen-estimator)
   - [The alive–dead model](#the-alivedead-model)
+  - [Confidence interval of estimate](#confidence-interval-of-estimate)
+    - [CI of survival function estimate](#ci-of-survival-function-estimate)
+    - [CI of cumulative hazard function estimate](#ci-of-cumulative-hazard-function-estimate)
 
 ## Introduction
 
@@ -106,11 +109,11 @@ When the data are interval censored, we don't have exact information on the time
 
 We can construct the empirical survival function at the end of each interval. For the value between the grouped intervals, we need to make some assumption about the distribution of deaths. For example, we can assume the deaths are uniformly distributed and thus we can use linear interpolation. This is called the **ogive empirical survival function**.
 
-### The Kaplan–Meier estimate
+### The Kaplan–Meier estimator
 
 Say we have a list of $k$ exit times in our observation. Let's label the deceased lives in the observation as $(1), (2), \ldots, (n)$, ordered ascendingly by the death time. Note that $n \leq k$ because not all samples exited due to death.
 
-The Kaplan-Meier estimate considers the survival probability at time when deaths occurred, i.e., $t_{(j)}$ for $j = 1, 2, \ldots, n$.
+The **Kaplan-Meier estimate considers the survival probability at time when deaths occurred**, i.e., $t_{(j)}$ for $j = 1, 2, \ldots, n$. Then, **it estimate the survival function by multiplying all survival probability**.
 
 First, we define $p_{(j)}$. This is the probability that a life survived right before time $t_{(j)}$ but deceased right after $t_{(j)}$. It can be estimated by
 
@@ -163,20 +166,6 @@ $$
   \mathrm{Var}[\hat S (t)] \approx \hat{S} (t) ^2 \cdot \sum _{\forall j: t _{(j)} < t} \frac{d _j}{r _j \cdot (r _j - d _j)}.
 $$
 
-And the 95% confidence interval for $S(t)$ is
-
-$$
-  \hat{S} (t) \pm 1.96 \cdot \sqrt{\mathrm{Var}[\hat S (t)]}
-$$
-
-Since $S(t)$ is bounded between 0 and 1, the textbook also discussed the variance of $g(S(t)) = \ln (-\ln (S(t)))$, which has a range of $(-\infty, \infty)$. The variance of $g(\hat S(t))$ can be calculate using the **delta method**:
-
-$$
-  \mathrm{Var}[g(\hat S(t))] \approx \left(\frac{d g(\hat S (t))}{d\hat S (t)}\right)^2 \cdot \mathrm{Var}[\hat S (t)] = \left( \frac{1}{\hat S (t) \cdot \ln \hat S (t)}\right) ^2 \cdot \mathrm{Var}[\hat S (t)].
-$$
-
-The confidence interval can be transformed back by $\exp (-\exp(\cdot))$ to get the **log-confidence interval**.
-
 Notes on Kaplan-Meier calculations
 - The $t$ in the model can be either age (for life table) or time (for other survival analysis like survival time of a disease).
 - If the final value is censored, a maximum age can be set and use exponential extrapolation.
@@ -215,14 +204,6 @@ But we are more concern about the survival function, $\hat S (x) = e ^{- \hat H 
 $$
   \mathrm{Var}[\hat S (x)] \approx \hat S(x) ^2 \cdot \mathrm{Var}[\hat H (x)] = \hat S(x) ^2 \cdot \sum _{\forall j: t_{(j)} \leq x} \frac{d _j \cdot (r _j - d _j)}{r _j ^3}.
 $$
-
-Regarding the confidence interval of $\hat S (x)$, we can first get the CI of $\hat H (x)$. Here is the 95% CI:
-
-$$
-  \hat H (x) \pm 1.96 \cdot \sqrt{\mathrm{Var}[\hat H (x)]}.
-$$
-
-Since $\hat H (x) \in (0, \infty)$, the CI may get out of range. We can transform $\hat H (x)$ to $\ln \hat H (x)$ and calculate the log-transformed CI.
 
 ## The alive–dead model
 
@@ -288,3 +269,58 @@ $$
 $$
 
 which is called the **actuarial estimate** of $q _x$. There is very small difference between $\hat q _x$ and $\tilde q _x$ when $\mu _x$ is small. But the MLE $\hat q _x$ is more consistent, therefore generally preferred. One problem of $\tilde q _x$ is that the estimator assume constant force of mortality but than it used UDD later to create the actuarial estimate.
+
+## Confidence interval of estimate
+
+The formula sheet provides the variance of the survival function estimate $\hat S (t)$ for both the Kaplan-Meier estimator and the Nelson-Aalen estimator.
+
+Note that in the variance formula of $\hat S(t)$ for Nelson-Aalen estimator, it also embedded the variance formula for $\hat H(t)$. Specifically, the formula sheet shows
+
+$$
+    \mathrm{Var}[\hat S (t)] \approx  \hat S(t) ^2 \cdot \underbrace{\sum _{\forall j: t_{(j)} \leq x} \frac{d _j \cdot (r _j - d _j)}{r _j ^3}}_{\mathrm{Var}[\hat H (t)]}.
+$$
+
+### CI of survival function estimate
+
+Now, we can move on to the discussion of **confidence interval (CI) of the survival function estimates**. There are 2 types of CI:
+- **linear CI**
+  
+  $$
+    \mathrm{CI} = \hat S(t) \pm z\cdot \sqrt{Var[\hat S(t)]}.
+  $$
+  
+  But the shortcoming is that since $\hat S(t) \in [0, 1]$, the CI may be out of range. Hence we use the log CI.
+
+- **log CI**
+  
+  Since $\hat S(t) \in [0, 1]$, we can use function $g: [0, 1] \to (-\infty, \infty), g(t) = \ln (- \ln (t))$ to transform $\hat S (t)$. By delta method, 
+
+  $$
+    \mathrm{Var}[g(\hat S(t))] \approx \left(\frac{d g(\hat S (t))}{d\hat S (t)}\right)^2 \cdot \mathrm{Var}[\hat S (t)] = \left( \frac{1}{\hat S (t) \cdot \ln \hat S (t)}\right) ^2 \cdot \mathrm{Var}[\hat S (t)].
+  $$
+
+  Then the CI for  $g(\hat S(t))$ is 
+
+  $$
+    \mathrm{CI}[g(\hat S(t))] = g(\hat S(t)) \pm z \cdot \sqrt{\mathrm{Var}[g(\hat S(t))]} = (\mathrm{Lower}_{g(\hat S(t))}, \mathrm{Upper} _{g(\hat S(t))}).
+  $$
+
+  Note that $t \to 0, g(t) \to \infty$ and $t \to 1, g(t) \to -\infty$, the $\mathrm{Lower}_{g(\hat S(t))}$ will be the upper bound of $\mathrm{CI}[\hat S(t)]$, and vice versa. And to transform back to $\mathrm{CI}[\hat S(t)]$, we use $g ^{-1}(t) = \exp(-\exp (t))$:
+
+  $$
+    \mathrm{CI}[\hat S(t)] = \Big( \exp(-\exp (\mathrm{Upper} _{g(\hat S(t))})), \exp(-\exp (\mathrm{Lower}_{g(\hat S(t))})) \Big).
+  $$
+
+### CI of cumulative hazard function estimate
+
+The same **log CI method can also be applicable to the Nelson-Aelen cumulative hazard function estimate**, $\hat H(t)$. Since $\hat H(t)$ has a range of $(0, \infty)$, we just need to use $g(t) = \ln x$. Then
+
+$$
+  \mathrm{Var}[g(\hat H(t))] \approx \left(\frac{d g(\hat H (t))}{d\hat H (t)}\right)^2 \cdot \mathrm{Var}[\hat H (t)] = \left( \frac{1}{\hat H (t)}\right) ^2 \cdot \mathrm{Var}[\hat H (t)].
+$$
+
+If we denote $\mathrm{CI}[g(\hat H(t))] = \big( \mathrm{Lower}_{g(\hat H(t))}, \mathrm{Upper} _{g(\hat H(t))} \big)$, the CI for $\hat H(t)$ is 
+
+$$
+  \mathrm{CI}[\hat H(t)] = \Big( \exp (\mathrm{Lower} _{g(\hat H(t))}), \exp (\mathrm{Upper}_{g(\hat H(t))}) \Big).
+$$
