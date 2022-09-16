@@ -21,7 +21,7 @@ Textbook: *Actuarial Mathematics for Life Contingent Risks, Third Edition (2020)
 Required chapters:
 | Chapter                        | Topic                    | Note                                                 | Status    |                                  Related topics                                  |
 | ------------------------------ | ------------------------ | ---------------------------------------------------- | --------- | :------------------------------------------------------------------------------: |
-| 1                              | Intro to life insurance  | [md](reading_notes/01_intro.md)                      | Completed |      [7](#7-insurance-coverages-and-retirement-financial-security-programs)      |
+| 1                              | Intro to life insurance  | [md](reading_notes/01_life_insurance_intro.md)       | Completed |      [7](#7-insurance-coverages-and-retirement-financial-security-programs)      |
 | 2                              | Survival model           | [md](reading_notes/02_survival_models.md)            | Completed |                             [8](#8-mortality-models)                             |
 | 3 (except 3.11, 3.12)          | Life tables              | [md](reading_notes/03_life_tables_and_selection.md)  | Completed |                             [8](#8-mortality-models)                             |
 | 4                              | Life insurance functions | [md](reading_notes/04_insurance_benefits.md)         | Completed |    [10](#10-present-value-random-variables-for-long-term-insurance-coverages)    |
