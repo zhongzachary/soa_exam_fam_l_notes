@@ -102,6 +102,7 @@ And if we know the deferred mortality probability function, we can directly calc
 $$
   \ddot{a}_x = \mathrm{E}\left[\ddot{a} _{\overline{K _x +1|}}\right] = \sum^\infty _{k=0} \ddot{a} _{\overline{k+1|}} \cdot {} _k | q _x.
 $$
+
 Here, the whole-life annuity has a probability of ${} _k | q_x$ to be an annuity-due certain of $k+1$ payments. Note that this is less often used in practice than the previous 2 formulations.
 
 The variance of the present value rv is 
