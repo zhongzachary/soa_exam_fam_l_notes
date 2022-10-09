@@ -97,7 +97,7 @@ Hence, the policy value at time $t$ is
 $$
   \begin{aligned}
     {} _t V = &P\cdot (IA) _{[x] + t:\overline{d - t|}} ^ 1 + (t\cdot P + 100) \cdot A _{[x] + t:\overline{d - t|}} ^ 1 + (M + 25) \cdot {} _{d - t} E _{[x]+t} \cdot \ddot{a} _{[x]+ d} \\ 
-    &- (1 - 5\%)\cdot P \cdot \ddot{a} _{[x] + t: \overline{d - t|}}
+    &- (1 - 0.05)\cdot P \cdot \ddot{a} _{[x] + t: \overline{d - t|}}
   \end{aligned}
 $$
 
@@ -143,7 +143,7 @@ $$
 **Example** Consider a fully discrete $n$-year endowment insurance sold to a select life aged $x$ and assume there are no expenses. Let $P$ denote the net premium, and let $S$ denote the sum insured. For $0 \leq t < n$, we have
 
 $$
-  ({} _t V + P)\cdot (1 + i) = S \cdot q_{[x] + t} + {} _{t+1} V \cdot p _{[x] + t}.
+  ({} _t V + P)\cdot (1 + i) = S \cdot q _{[x] + t} + {} _{t+1} V \cdot p _{[x] + t}.
 $$
 
 This formulations make senses because the LHS is the current policy value plus premium, accumulating interest for 1 year, while the RHS is the expected death benefit payout (if the policyholder dies in 1 year) and the next year's expected policy value (if the policy hold survives 1 year).
