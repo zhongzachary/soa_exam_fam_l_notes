@@ -157,7 +157,7 @@ Expenses are 10% of the first premium and 5% of subsequent premiums, plus $25 wi
 Then, we have the following recursive formula
 
 $$
-({} _t V + 95\% \cdot P) \cdot (1 +i) = ((t+1) \cdot P + 100) \cdot q _{[50] + t} + p _{[50] + t} \cdot {} _{t+1} V.
+({} _t V + 0.95 \cdot P) \cdot (1 +i) = ((t+1) \cdot P + 100) \cdot q _{[50] + t} + p _{[50] + t} \cdot {} _{t+1} V.
 $$
 
 Again, to make sense of this formula, the LHS is current policy value plus the premium less expenses (i.e. the premium that can be added to the fund), accumulating interest for 1 year. The RHS is the expected death benefit plus expenses (if the policyholder dies) and the next year's expected policy value (if the policyholder survives).
@@ -171,6 +171,7 @@ With these 2 examples, we can come up with something that applies more generally
 - ${} _t V$ denote the gross premium policy value for a policy in force at time $t$.
 
 Then, we have
+
 $$
   \boxed{({} _t V + P _t - e _t) \cdot (1 + i _t) = q _{[x] + t} \cdot (S _{t+1} + E _{t+1}) + p _{[x]+t} \cdot {} _{t+1} V}.
 $$
