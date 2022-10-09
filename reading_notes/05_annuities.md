@@ -347,7 +347,7 @@ In a spreadsheet, given values for ${} _t p _x$, we may calculate $\ddot{a} _x$ 
 - for age $x < \omega - 1$,
 
   $$
-    \boxed{\ddot{a} _x = 1 + \underbrace{v \cdot p _x}_{{} _1 E _x} \cdot \ddot{a} _{x+1}}.
+    \boxed{\ddot{a} _x = 1 + \underbrace{v \cdot p _x} _{{} _1 E _x} \cdot \ddot{a} _{x+1}}.
   $$
 
 For $1/m$-thly annuity-due,
