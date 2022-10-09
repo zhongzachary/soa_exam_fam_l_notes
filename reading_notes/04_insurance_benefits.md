@@ -61,7 +61,7 @@ A refresher on interest theory functions:
 - ${} ^\mathbf{k} A$: $\mathbf{k}$ is the multiplier on the force of interest
 - $A ^\mathbf{1} _{x:\overline{\mathbf{n}|}}$: term insurance of $\mathbf{n}$ years, the $\mathbf{1}$ on top of $x$ indicates the life $(x)$ must die before the term of $\mathbf{n}$ years expires in order for the benefit to be payable. 
 - $A_{x:\overset{\mathbf{1}}{\overline{\mathbf{n}|}}}$: pure endowment insurance of $\mathbf{n}$ years, the $\mathbf{1}$ on top of $\overline{\mathbf{n}|}$ indicates the term of $\mathbf{n}$ years must expire before life $(x)$ dies in order for the benefit to be payable.
-- ${}_n E_x$: same as $A_{x:\overset{1}{\overline{n|}}}$, but easier to typeset.
+- ${} _n E _x$: same as $A _{x:\overset{1}{\overline{n|}}}$, but easier to typeset.
 - $\bar{A} _{x:\overline{n|}}$: if there is not $1$ on top, it indicates the benefit will pay when $(x)$ dies or the term of $n$ years expires, i.e., a combination of term and pure endowment.
 - ${} _\mathbf{u} | A$: the $\mathbf{u}$ indicates the death benefit coverage only starts after the deferred periods of $u$ years.
 
