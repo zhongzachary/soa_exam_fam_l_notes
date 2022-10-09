@@ -176,14 +176,14 @@ $$
   \boxed{({} _t V + P _t - e _t) \cdot (1 + i _t) = q _{[x] + t} \cdot (S _{t+1} + E _{t+1}) + p _{[x]+t} \cdot {} _{t+1} V}.
 $$
 
-We also have a very important concept call **Sum at Risk** (SAR), or the **death strain at risk** or the **net amount at risk**. This is the different because the death benefit at $t$ and the policy value at $t$, i.e. $S_t - {} _ t V$. It measures how much the insurer need to make up to cover the death benefit at time $t$. It is useful in determining risk management strategy, including reinsurance.
+We also have a very important concept call **Sum at Risk** (SAR), or the **death strain at risk** or the **net amount at risk**. This is the different between the death benefit at $t$ and the policy value at $t$, i.e. $S_t - {} _ t V$. It measures how much the insurer need to make up to cover the death benefit at time $t$. It is useful in determining risk management strategy, including reinsurance.
 
 There are also cases where the death benefit is related to the policy value and direct calculation of policy value using premiums and benefit is impossible. Then, we have to use recursive formula.
 
 For example, consider a $n$-year endowment with a level premiums of $P$. A sum insured of $S$ is payable at the the end of the term if the life survives. On death before the end of the term, a sum insured is payable at the end of the year of death equal to the policy value. Assuming there is no expense, we then have to following backward recursion to calculate policy value:
 
 - ${} _n V = S$
-- $({} _{t} V + P) \cdot (1 + i) = q_{x+t} \cdot {} _{t} V + p _{x+t} \cdot {} _{t+1} V$. Hence, $\displaystyle {} _t V =  \frac{p _{x+t} \cdot {} _{t+1} V - P \cdot (1 + i)}{1 + i - q _{x+t}}$ for $0 \leq t < n$.
+- $({} _{t} V + P) \cdot (1 + i) = q _{x+t} \cdot {} _{t} V + p _{x+t} \cdot {} _{t+1} V$. Hence, $\displaystyle {} _t V =  \frac{p _{x+t} \cdot {} _{t+1} V - P \cdot (1 + i)}{1 + i - q _{x+t}}$ for $0 \leq t < n$.
 
 ---
 
