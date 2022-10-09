@@ -250,7 +250,7 @@ $$
 When $l_x$ is provided in a life table, $d_x$ can also be calculated, making it easier to perform calculation under UDD assumption. We can simply calculate
 
 $$
-  {} _{t+s} p _x = \frac{l_{x+t} + s \cdot d _{x+t} }{l_x},
+  {} _{t+s} p _x = \frac{l _{x+t} + s \cdot d _{x+t} }{l _x},
 $$
 
 where $t \in \mathbb{Z}_{\geq 0}$, $0 \leq s < 1$, and $d _{x+t} = l _{x+t} - l _{x+t+1}$.
