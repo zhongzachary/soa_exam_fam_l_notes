@@ -113,7 +113,7 @@ We can construct the empirical survival function at the end of each interval. Fo
 
 Say we have a list of $k$ exit times in our observation. Let's label the deceased lives in the observation as $(1), (2), \ldots, (n)$, ordered ascendingly by the death time. Note that $n \leq k$ because not all samples exited due to death.
 
-The **Kaplan-Meier estimate considers the survival probability at time when deaths occurred**, i.e., $t_{(j)}$ for $j = 1, 2, \ldots, n$. Then, **it estimate the survival function by multiplying all survival probability**.
+The **Kaplan-Meier estimate (aka the product limit estimate) considers the survival probability at time when deaths occurred**, i.e., $t_{(j)}$ for $j = 1, 2, \ldots, n$. Then, **it estimate the survival function by multiplying all survival probability**.
 
 First, we define $p_{(j)}$. This is the probability that a life survived right before time $t_{(j)}$ but deceased right after $t_{(j)}$. It can be estimated by
 
@@ -299,17 +299,26 @@ Now, we can move on to the discussion of **confidence interval (CI) of the survi
     \mathrm{Var}[g(\hat S(t))] \approx \left(\frac{d g(\hat S (t))}{d\hat S (t)}\right)^2 \cdot \mathrm{Var}[\hat S (t)] = \left( \frac{1}{\hat S (t) \cdot \ln \hat S (t)}\right) ^2 \cdot \mathrm{Var}[\hat S (t)].
   $$
 
-  Then the CI for  $g(\hat S(t))$ is 
+  If we denote $\sigma _g = \frac{\sqrt{\mathrm{Var}[\hat S (t)]}}{\hat S (t) \cdot |\ln \hat S (t)|}$, then the CI for  $g(\hat S(t))$ is 
 
   $$
-    \mathrm{CI}[g(\hat S(t))] = g(\hat S(t)) \pm z \cdot \sqrt{\mathrm{Var}[g(\hat S(t))]} = (\mathrm{Lower}_{g(\hat S(t))}, \mathrm{Upper} _{g(\hat S(t))}).
+    \mathrm{CI}[g(\hat S(t))] = g(\hat S(t)) \pm z \cdot \sigma _g.
   $$
 
-  Note that $t \to 0, g(t) \to \infty$ and $t \to 1, g(t) \to -\infty$, the $\mathrm{Lower}_{g(\hat S(t))}$ will be the upper bound of $\mathrm{CI}[\hat S(t)]$, and vice versa. And to transform back to $\mathrm{CI}[\hat S(t)]$, we use $g ^{-1}(t) = \exp(-\exp (t))$:
+  Let's denote the above CI as $(L_g, U_g)$. Note that $t \to 0, g(t) \to \infty$ and $t \to 1, g(t) \to -\infty$, the $L_g$ will be the upper bound of $\mathrm{CI}[\hat S(t)]$, and vice versa. And to transform back to $\mathrm{CI}[\hat S(t)]$, we use $g ^{-1}(t) = e ^{-e ^ t}$:
 
   $$
-    \mathrm{CI}[\hat S(t)] = \Big( \exp(-\exp (\mathrm{Upper} _{g(\hat S(t))})), \exp(-\exp (\mathrm{Lower}_{g(\hat S(t))})) \Big).
+    \begin{aligned}
+      \mathrm{CI}[\hat S(t)] &= \Big( g ^{-1}(U_g), g ^{-1} (L_g) \Big) \\
+      &= \Big( g ^{-1}(g(\hat S(t)) + z \cdot \sigma _g), g ^{-1} (g(\hat S(t)) - z \cdot \sigma _g) \Big) \\
+      &= \Big( (\hat S(t)) ^ {\exp(z\cdot \sigma _g)}, (\hat S(t)) ^ {\exp(-z\cdot \sigma _g)} \Big)
+    \end{aligned}
   $$
+
+  **Exam tips**: In the exam, it may provide the log-CI of $\hat S (t)$, denoted $(L', U')$. The above formula will help us to find out the followings
+  - $\exp({z \cdot \sigma _g}) = \sqrt{\ln L' / \ln U'}$,
+  - $\hat S (t) = \sqrt[\exp({z \cdot \sigma _g})]{L}$, and
+  - $\mathrm{Var} [\hat S(t)]$ by using the definition of $\sigma_g$.
 
 ### CI of cumulative hazard function estimate
 

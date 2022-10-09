@@ -406,7 +406,8 @@ For term annuities,
 $$
   \begin{aligned}
     \ddot{a} ^{(m)} _{x:\overline{n|}} &= \ddot{a} ^{(m)} _x - {} _n E _x \cdot \ddot{a} ^{(m)} _{x+n} \\
-    &= \frac{i\cdot d}{i^{(m)} \cdot d^{(m)}} \cdot \ddot{a}_x - \frac{i - i^{(m)}}{i^{(m)} \cdot d^{(d)}} \cdot (1 - {} _n E _x).
+    &= \frac{i\cdot d}{i^{(m)} \cdot d^{(m)}} \cdot \ddot{a} _{x:\overline{n|}} - \frac{i - i^{(m)}}{i^{(m)} \cdot d^{(d)}} \cdot (1 - {} _n E _x) \\
+    &= \alpha(m) \cdot \ddot{a} _{x:\overline{n|}} - \beta(m) \cdot (1 - {} _n E _x).
   \end{aligned}
 $$
 

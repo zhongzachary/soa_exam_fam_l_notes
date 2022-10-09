@@ -264,12 +264,12 @@ The negative expense reserve is referred to as the **deferred acquisition cost**
 To achieve modified net premium reserves, the most common method is the full preliminary term (FPT) reserve. It separates the policy into 2: the policy that covers only the 1st year, and the policy that covers all subsequent years.
 
 For example, consider a whole life insurance with level annual premiums payable throughout the term. Then, 
-- The first year FPT premium is ${} _1 P _{[x]} = S \cdot A ^1 _{[x]:\overline{1|}}$. This is also the first year cost of insurance.
+- The first year FPT premium is ${} _1 P _{[x]} = S \cdot A ^1 _{[x]:\overline{1|}} = S \cdot v \cdot q _{[x]}$. This is also the first year cost of insurance.
 - The subsequent FPT premium is 
   
-$$
-  P _{[x] + 1} = \frac{S \cdot A _{[x] + 1}}{\ddot{a} _{[50] + 1}}
-$$
+  $$
+    P _{[x] + 1} = \frac{S \cdot A _{[x] + 1}}{\ddot{a} _{[x] + 1}}
+  $$
 
 Because ${} _1 P _{[x]}$ is much lower than $P _{[x] + 1}$, that's how FPT implicitly accounts for higher acquisition cost.
 
