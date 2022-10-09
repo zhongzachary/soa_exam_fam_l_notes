@@ -11,7 +11,6 @@
   - [Annuities payable monthly](#annuities-payable-monthly)
   - [Deferred annuities](#deferred-annuities)
   - [Guaranteed annuities](#guaranteed-annuities)
-    - [Arithmetically increasing annuities](#arithmetically-increasing-annuities)
   - [Increasing annuities](#increasing-annuities)
     - [Geometrically increasing annuities](#geometrically-increasing-annuities)
   - [Evaluating annuity function](#evaluating-annuity-function)
@@ -276,15 +275,13 @@ $$
 
 ## Guaranteed annuities
 
-### Arithmetically increasing annuities
-
 For an annuity-due with a guaranteed for $n$ years, the plan will make $n$ payments even if the policyholder dies before year $n$. The present value rv is
 
 $$
   Y =
   \begin{cases}
     \ddot{a} _{\overline{n |}} & K _x \leq n - 1, \\
-    \ddot{a} _{\overline{K _x + 1}} & K _x \geq n
+    \ddot{a} _{\overline{K _x + 1|}} & K _x \geq n
   \end{cases}
   = \ddot{a} _{\overline{n|}} +
   \underbrace{
